@@ -58,7 +58,7 @@ public class Merve {
         buttonHome.click();
         MyFunc.Wait(3);
 
-        WebElement buttonButtons=driver.findElement(By.className("item-4"));
+        WebElement buttonButtons=driver.findElement(By.id("item-4"));
         buttonButtons.click();
         MyFunc.Wait(3);
 
