@@ -43,20 +43,6 @@ public class Merve {
             System.out.println("Doğrulanmadı!");
         }
 
-        WebElement kontrolCurrentAdress=driver.findElement(By.id("currentAddress"));
-        if (currentAdress.getText().equals(kontrolCurrentAdress)){
-            System.out.println("Doğrulandı");
-        }else {
-            System.out.println("Doğrulanmadı!");
-        }
-
-        WebElement kontrolPermanentAdress=driver.findElement(By.id("permanentAdress"));
-        if (permanentAdress.getText().equals(kontrolPermanentAdress)){
-            System.out.println("Doğrulandı");
-        }else {
-            System.out.println("Doğrulanmadı!");
-        }
-
         WebElement buttonCheckBox=driver.findElement(By.id("item-1"));
         buttonCheckBox.click();
         MyFunc.Wait(3);
