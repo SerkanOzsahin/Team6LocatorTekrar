@@ -33,56 +33,39 @@ public class Ummuhan {
         buttonSubmit.click();
         MyFunc.Wait(2);
 
-        if(fullnameBox.getText().contains(fullName)){
-            fullnameBox.sendKeys(fullName);
+        WebElement name=driver.findElement(By.id("name"));
+        if(name.getText().contains(fullName)){
             System.out.println("isim soyisim eklendi");
-        } else
-            System.out.println("doğrulanmadı");
+        }
         MyFunc.Wait(1);
 
-        if (email.getText().contains(emailMe)) {
-            email.sendKeys(emailMe);
+        WebElement email2=driver.findElement(By.id("email"));
+        if (email2.getText().contains(emailMe)) {
             System.out.println("email eklendi");
-        } else
-            System.out.println("doğrulanmadı");
-        MyFunc.Wait(1);
-
-        if (currentAddress.getText().contains(address)){
-            currentAddress.sendKeys(address);
-            System.out.println("adres eklendi");
-        } else
-            System.out.println("doğrulanmadı");
-        MyFunc.Wait(1);
-
-        if (permanentAddress.getText().contains(pAddress)){
-            permanentAddress.sendKeys(address);
-            System.out.println("adres eklendi");
-        } else
-            System.out.println("doğrulanmadı");
+        }
         MyFunc.Wait(1);
 
         WebElement checkBox=driver.findElement(By.id("item-1"));
         checkBox.click();
-
         MyFunc.Wait(2);
 
         WebElement homeBox=driver.findElement(By.className("rct-checkbox"));
         homeBox.click();
-
         MyFunc.Wait(2);
 
         WebElement buttonsBox=driver.findElement(By.id("item-4"));
         buttonsBox.click();
-
         MyFunc.Wait(2);
 
         WebElement links=driver.findElement(By.id("item-5"));
         links.click();
+        MyFunc.Wait(2);
 
         WebElement homeLink=driver.findElement(By.id("simpleLink"));
         homeLink.click();
-
         MyFunc.Wait(2);
+
+
         driver.quit();
 
 
