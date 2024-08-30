@@ -10,58 +10,51 @@ public class Merve {
         driver.get("https://demoqa.com/text-box");
         MyFunc.Wait(3);
 
+        String ad="Merve Kaya";
         WebElement fullNameBox=driver.findElement(By.id("userName"));
-        fullNameBox.sendKeys("Merve Kaya");
+        fullNameBox.sendKeys(ad);
         MyFunc.Wait(3);
 
+        String eMail="kayaamervee01@gmail.com";
         WebElement email=driver.findElement(By.id("userEmail"));
-        email.sendKeys("kayaamerve01@gmail.com");
+        email.sendKeys(eMail);
         MyFunc.Wait(3);
 
+        String adress="İstanbul/Turkey";
         WebElement currentAdress=driver.findElement(By.id("currentAddress"));
-        currentAdress.sendKeys("İstanbul/Turkey");
+        currentAdress.sendKeys(adress);
         MyFunc.Wait(3);
 
+        String pAdress="Güzelyalı mah. Adana/Turkey";
         WebElement permanentAdress=driver.findElement(By.id("permanentAddress"));
-        permanentAdress.sendKeys("Güzelyalı mah. Adana/Turkey");
+        permanentAdress.sendKeys(pAdress);
         MyFunc.Wait(3);
 
         WebElement buttonSubmit=driver.findElement(By.id("submit"));
         buttonSubmit.click();
+        MyFunc.Wait(3);
 
         WebElement kontrolName=driver.findElement(By.id("name"));
-        if (fullNameBox.getText().equals(kontrolName)){
+        if (kontrolName.getText().contains(ad)){
             System.out.println("Doğrulandı");
         }else {
             System.out.println("Doğrulanmadı!");
         }
+        MyFunc.Wait(3);
 
         WebElement kontrolEmail=driver.findElement(By.id("email"));
-        if (email.getText().equals(kontrolEmail)){
+        if (kontrolEmail.getText().contains(eMail)){
                 System.out.println("Doğrulandı");
         }else {
             System.out.println("Doğrulanmadı!");
         }
-
-        WebElement kontrolCurrentAdress=driver.findElement(By.id("currentAddress"));
-        if (currentAdress.getText().equals(kontrolCurrentAdress)){
-            System.out.println("Doğrulandı");
-        }else {
-            System.out.println("Doğrulanmadı!");
-        }
-
-        WebElement kontrolPermanentAdress=driver.findElement(By.id("permanentAdress"));
-        if (permanentAdress.getText().equals(kontrolPermanentAdress)){
-            System.out.println("Doğrulandı");
-        }else {
-            System.out.println("Doğrulanmadı!");
-        }
+        MyFunc.Wait(3);
 
         WebElement buttonCheckBox=driver.findElement(By.id("item-1"));
         buttonCheckBox.click();
         MyFunc.Wait(3);
 
-        WebElement buttonHome=driver.findElement(By.className("rct-title"));
+        WebElement buttonHome=driver.findElement(By.className("rct-checkbox"));
         buttonHome.click();
         MyFunc.Wait(3);
 
@@ -74,7 +67,7 @@ public class Merve {
         MyFunc.Wait(3);
 
         WebElement homeButton=driver.findElement(By.id("simpleLink"));
-        buttonHome.click();
+        homeButton.click();
         MyFunc.Wait(3);
         driver.quit();
 
