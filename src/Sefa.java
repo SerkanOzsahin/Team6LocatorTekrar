@@ -12,7 +12,6 @@ public class Sefa {
         String currentAddressStr="Samsun";
         String permanentAddressStr="Samsun yerli";
 
-
         WebDriver driver=new ChromeDriver();
         driver.get("https://demoqa.com/text-box");
 
@@ -59,18 +58,6 @@ public class Sefa {
         buttons.click();
         MyFunc.Wait(2);
 
-//        WebElement clickMe=driver.findElement(By.id("doubleClickBtn"));
-//        clickMe.click();
-//        MyFunc.Wait(1);
-//        clickMe.click();
-//        MyFunc.Wait(2);
-//
-//        List<WebElement> message=driver.findElements(By.id("dynamicClickMessage"));
-//        for (WebElement e : message){
-//            System.out.println("e.getText() = " + e.getText());
-//        }
-//        MyFunc.Wait(2);
-
         WebElement links=driver.findElement(By.id("item-5"));
         links.click();
         MyFunc.Wait(2);
@@ -79,8 +66,6 @@ public class Sefa {
         home2.click();
         MyFunc.Wait(2);
 
-
         driver.quit();
-
     }
 }
