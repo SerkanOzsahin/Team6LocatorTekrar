@@ -36,12 +36,16 @@ public class Sefa {
         WebElement name = driver.findElement(By.id("name"));
         if (name.getText().contains(fullnameStr)) {
             System.out.println("Full name doğrulandı");
+        }else {
+            System.out.println("Doğrulanmadı.");
         }
 
         MyFunc.Wait(1);
         WebElement email2 = driver.findElement(By.id("email"));
         if (email2.getText().contains(emailStr)) {
             System.out.println("Email doğrulandı");
+        }else {
+            System.out.println("Doğrulanmadı.");
         }
 
         MyFunc.Wait(2);
