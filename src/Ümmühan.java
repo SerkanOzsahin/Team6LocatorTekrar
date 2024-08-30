@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class Ummuhan {
+public class Ümmühan {
     public static void main(String[] args) {
 
         WebDriver driver = new ChromeDriver();
@@ -34,19 +34,22 @@ public class Ummuhan {
         buttonSubmit.click();
         MyFunc.Wait(2);
 
+        // TODO getText : mesaj al.
+        // Kullanıcı bilgileri girdikten sonra submit yapıp  kontrol edilen yer, bu kısmın getTexti alınır.
+
         WebElement name=driver.findElement(By.id("name"));
         if (name.getText().contains(fullName)) {
-            System.out.println("isim soyisim eklendi");
+            System.out.println("İsim soyisim eşleşmesi doğrulandı");
         } else {
-            System.out.println("bulunamadı");
+            System.out.println("Doğrulanma Bulunamadı");
         }
         MyFunc.Wait(1);
 
         WebElement email2=driver.findElement(By.id("email"));
         if (email2.getText().contains(emailMe)) {
-            System.out.println("email eklendi");
+            System.out.println("E-mail adresi doğrulandı");
         } else {
-            System.out.println("bulunamadı");
+            System.out.println("E-mail adresi doğrulanamadı");
         }
         MyFunc.Wait(1);
 
@@ -56,19 +59,20 @@ public class Ummuhan {
 
         WebElement homeBox = driver.findElement(By.className("rct-checkbox"));
         homeBox.click();
-        MyFunc.Wait(2);
+        MyFunc.Wait(3);
 
         WebElement buttonsBox = driver.findElement(By.id("item-4"));
         buttonsBox.click();
-        MyFunc.Wait(2);
+        MyFunc.Wait(3);
 
         WebElement links = driver.findElement(By.id("item-5"));
         links.click();
+        MyFunc.Wait(3);
 
         WebElement homeLink = driver.findElement(By.id("simpleLink"));
         homeLink.click();
 
-        MyFunc.Wait(2);
+        MyFunc.Wait(3);
         driver.quit();
 
 
