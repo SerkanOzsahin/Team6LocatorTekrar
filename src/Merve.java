@@ -58,7 +58,7 @@ public class Merve {
         }
 
         WebElement buttonCheckBox=driver.findElement(By.id("item-1"));
-        buttonSubmit.click();
+        buttonCheckBox.click();
         MyFunc.Wait(3);
 
         WebElement buttonHome=driver.findElement(By.className("rct-title"));
