@@ -3,8 +3,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.List;
-
 public class Sefa {
     public static void main(String[] args) {
         String fullnameStr="Sefa Kahraman";
