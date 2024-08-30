@@ -36,17 +36,17 @@ public class Ummuhan {
 
         WebElement name=driver.findElement(By.id("name"));
         if (name.getText().contains(fullName)) {
-            System.out.println("isim soyisim eklendi");
+            System.out.println("İsim soyisim eşleşmesi doğrulandı");
         } else {
-            System.out.println("bulunamadı");
+            System.out.println("Eşleşme doğrulanamadı");
         }
         MyFunc.Wait(1);
 
         WebElement email2=driver.findElement(By.id("email"));
         if (email2.getText().contains(emailMe)) {
-            System.out.println("email eklendi");
+            System.out.println("E-mail adresiniz doğrulandı");
         } else {
-            System.out.println("bulunamadı");
+            System.out.println("Eşleşme doğrulanamadı");
         }
         MyFunc.Wait(1);
 
@@ -64,11 +64,12 @@ public class Ummuhan {
 
         WebElement links = driver.findElement(By.id("item-5"));
         links.click();
+        MyFunc.Wait(3);
 
         WebElement homeLink = driver.findElement(By.id("simpleLink"));
         homeLink.click();
+        MyFunc.Wait(3);
 
-        MyFunc.Wait(2);
         driver.quit();
 
 
