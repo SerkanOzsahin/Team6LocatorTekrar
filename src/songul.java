@@ -25,7 +25,6 @@ public class songul {
         driver.get("https://demoqa.com/text-box");
         MyFunc.Wait(3);
 
-
         WebElement userName = driver.findElement(By.id("userName"));
         userName.sendKeys(songulstr);
         MyFunc.Wait(2);
