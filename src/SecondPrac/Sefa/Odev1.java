@@ -125,6 +125,8 @@ public class Odev1 extends BaseDriver {
         Sonucu alınız.
         Sonucu yazdırınız.
       */
+        String number1Str="5";
+        String number2Str="5";
         driver.get("https://testpages.herokuapp.com/styled/index.html");
         MyFunc.Wait(2);
 
@@ -133,11 +135,11 @@ public class Odev1 extends BaseDriver {
         MyFunc.Wait(2);
 
         WebElement number1=driver.findElement(By.cssSelector("input[type='text'][name='number1']"));
-        number1.sendKeys("5");
+        number1.sendKeys(number1Str);
         MyFunc.Wait(2);
 
         WebElement number2=driver.findElement(By.cssSelector("input[type='text'][name='number2']"));
-        number2.sendKeys("5");
+        number2.sendKeys(number2Str);
         MyFunc.Wait(2);
 
         WebElement calculate=driver.findElement(By.cssSelector("[type='submit']"));
@@ -147,7 +149,11 @@ public class Odev1 extends BaseDriver {
         WebElement answer=driver.findElement(By.cssSelector("div[class='page-body'] span"));
         System.out.println("cevap.getText() = " + answer.getText());
 
-        Assert.assertTrue("Test başarısız",answer.getText().contains("10"));
+        int number1Int=Integer.parseInt(number1Str);
+        int number2Int=Integer.parseInt(number2Str);
+        int total=number1Int+number2Int;
+        String totalStr=String.valueOf(total);
+        Assert.assertTrue("Test başarısız",answer.getText().contains(totalStr));
 
         BekleKapat();
     }
