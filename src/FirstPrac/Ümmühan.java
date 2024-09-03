@@ -1,7 +1,10 @@
+package FirstPrac;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import Utility.MyFunc;
 
 
 public class Ümmühan {
@@ -10,7 +13,7 @@ public class Ümmühan {
         WebDriver driver = new ChromeDriver();
         driver.get("https://demoqa.com/text-box");
 
-        String fullName = "Ümmühan Teke";
+        String fullName = "FirstPrac.Ümmühan Teke";
         WebElement fullnameBox = driver.findElement(By.id("userName"));
         fullnameBox.sendKeys(fullName);
         MyFunc.Wait(2);

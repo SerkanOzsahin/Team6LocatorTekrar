@@ -1,3 +1,6 @@
+package FirstPrac;
+
+import Utility.MyFunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,14 +21,14 @@ public class Kerim {
         WebDriver driver=new ChromeDriver();
         driver.get("https://demoqa.com/text-box");
 
-        String name ="Kerim";
+        String name ="FirstPrac.Kerim";
         String email="a.kerim1990@hotmail.com";
         String curAddress="Bağcılar/İstanbul";
         String perAddress="Antakya/Hatay";
 
 
         WebElement userName= driver.findElement(By.id("userName"));
-        userName.sendKeys("Kerim");
+        userName.sendKeys("FirstPrac.Kerim");
         MyFunc.Wait(2);
         WebElement userEmail=driver.findElement(By.id("userEmail"));
         userEmail.sendKeys("a.kerim1990@hotmail.com");

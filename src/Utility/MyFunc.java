@@ -1,3 +1,5 @@
+package Utility;
+
 public class MyFunc {
     public static void Wait(int sn) {
         try {

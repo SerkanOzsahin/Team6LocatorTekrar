@@ -1,7 +1,10 @@
+package FirstPrac;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import Utility.MyFunc;
 
 public class Merve {
     public static void main(String[] args) {
@@ -10,7 +13,7 @@ public class Merve {
         driver.get("https://demoqa.com/text-box");
         MyFunc.Wait(3);
 
-        String ad="Merve Kaya";
+        String ad="FirstPrac.Merve Kaya";
         WebElement fullNameBox=driver.findElement(By.id("userName"));
         fullNameBox.sendKeys(ad);
         MyFunc.Wait(3);
