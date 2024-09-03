@@ -46,6 +46,5 @@ public class Merve extends BaseDriver {
         MyFunc.Wait(2);
         BekleKapat();
 
-
     }
 }
