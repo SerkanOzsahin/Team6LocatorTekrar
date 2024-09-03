@@ -128,7 +128,7 @@ public class Odev1 extends BaseDriver {
         driver.get("https://testpages.herokuapp.com/styled/index.html");
         MyFunc.Wait(2);
 
-        WebElement calculatorClick=driver.findElement(By.cssSelector("[id=calculatetest]"));
+        WebElement calculatorClick=driver.findElement(By.linkText("Calculator"));
         calculatorClick.click();
         MyFunc.Wait(2);
 
@@ -144,7 +144,7 @@ public class Odev1 extends BaseDriver {
         calculate.click();
         MyFunc.Wait(2);
 
-        WebElement answer=driver.findElement(By.cssSelector("[id='answer']"));
+        WebElement answer=driver.findElement(By.cssSelector("div[class='page-body'] span"));
         System.out.println("cevap.getText() = " + answer.getText());
 
         Assert.assertTrue("Test başarısız",answer.getText().contains("10"));
