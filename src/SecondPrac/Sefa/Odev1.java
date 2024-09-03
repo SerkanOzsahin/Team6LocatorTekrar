@@ -149,7 +149,9 @@ public class Odev1 extends BaseDriver {
         WebElement answer=driver.findElement(By.cssSelector("div[class='page-body'] span"));
         System.out.println("cevap.getText() = " + answer.getText());
 
-        int total=Integer.parseInt(number1Str+number2Str);
+        int number1Int=Integer.parseInt(number1Str);
+        int number2Int=Integer.parseInt(number2Str);
+        int total=number1Int+number2Int;
         String totalStr=String.valueOf(total);
         Assert.assertTrue("Test başarısız",answer.getText().contains(totalStr));
 
