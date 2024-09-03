@@ -27,10 +27,9 @@ public class Merve2 extends BaseDriver {
         signIn.click();
         MyFunc.Wait(2);
 
-        WebElement kontrolText=driver.findElement(By.cssSelector("h6[id='time']"));
+        WebElement kontrolText=driver.findElement(By.cssSelector("div[class='element-wrapper compact pt-4'] h6"));
         Assert.assertTrue("Beklenen yazıya ulaşılamadı.",kontrolText.getText().equals("Your nearest branch closes in: 30m 5s"));
         MyFunc.Wait(2);
         BekleKapat();
-
     }
 }
