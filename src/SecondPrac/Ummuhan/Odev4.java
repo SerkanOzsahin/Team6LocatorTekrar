@@ -2,6 +2,7 @@ package SecondPrac.Ummuhan;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -42,11 +43,10 @@ public class Odev4 extends BaseDriver {
         MyFunc.Wait(2);
 
         WebElement cevap=driver.findElement(By.cssSelector("div[class='centered']  > :nth-child(2)"));
-        System.out.println("Cevap: " + cevap.getText());
+        Assert.assertTrue("Doğru sonuç ekrana gelmedi", cevap.getText().contains("20"));
+        System.out.println(cevap.getText());
         MyFunc.Wait(2);
 
         BekleKapat();
-
-
     }
 }
