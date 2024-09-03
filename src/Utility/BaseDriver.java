@@ -8,6 +8,7 @@ import java.time.Duration;
 public class BaseDriver {
     public static WebDriver driver;
 
+
     static {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -15,7 +16,7 @@ public class BaseDriver {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
-    public static void BekleKapat() {
+    public static void WaitClose() {
         MyFunc.Wait(2);
         driver.quit();
     }
