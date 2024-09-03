@@ -2,6 +2,7 @@ package SecondPrac;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -36,21 +37,16 @@ public class Task1 extends BaseDriver {
         WebElement submitBtn= driver.findElement(By.cssSelector("div[class='text-right col-md-2 col-sm-12'] button"));
         submitBtn.click();
         MyFunc.Wait(2);
+
         String ad="Automation";
         String email1="Testing@gmail.com";
-        WebElement namecontrol= driver.findElement(By.cssSelector("div[class='border col-md-12 col-sm-12']>[ id='name']"));
-         if (namecontrol.getText().contains(ad)){
-             System.out.println("Test passed");
-         }else
-             System.out.println("Test failed");
 
+        WebElement namecontrol= driver.findElement(By.cssSelector("div[class='border col-md-12 col-sm-12']>[ id='name']"));
+        Assert.assertTrue("Test passed",namecontrol.getText().contains(ad));
          MyFunc.Wait(1);
 
          WebElement emailcontrol= driver.findElement(By.cssSelector("[class='mb-1'][id='email']"));
-         if (emailcontrol.getText().contains(email1)){
-             System.out.println("Test passed");
-         }else
-             System.out.println("Test failled");
+         Assert.assertTrue("Test passed",emailcontrol.getText().contains(email1));
          MyFunc.Wait(1);
 
         driver.quit();
