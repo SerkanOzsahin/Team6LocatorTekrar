@@ -12,14 +12,14 @@ public class Odev2 extends BaseDriver {
     public void Test1(){
         String fullNameStr = "Automation";
         String emailStr = "Testing@gmail.com";
-        String currentAddresStr = "Testing Current Address";
+        String currentAddressStr = "Testing Current Address";
         String permanentAddressStr = "Testing permanent address";
 
         driver.get("http://demoqa.com/text-box");
         MyFunc.Wait(2);
 
-        WebElement fullname = driver.findElement(By.xpath("//input[@type='text']"));
-        fullname.sendKeys(fullNameStr);
+        WebElement fullName = driver.findElement(By.xpath("//input[@type='text']"));
+        fullName.sendKeys(fullNameStr);
         MyFunc.Wait(2);
 
         WebElement email = driver.findElement(By.xpath("//input[@type='email']"));
@@ -27,7 +27,7 @@ public class Odev2 extends BaseDriver {
         MyFunc.Wait(2);
 
         WebElement currentAddress = driver.findElement(By.xpath("(//textarea[@class='form-control'])[1]"));
-        currentAddress.sendKeys(currentAddresStr);
+        currentAddress.sendKeys(currentAddressStr);
         MyFunc.Wait(2);
 
         WebElement permanentAddress = driver.findElement(By.xpath("(//textarea[@class='form-control'])[2]"));
@@ -38,8 +38,8 @@ public class Odev2 extends BaseDriver {
         submitBtn.click();
         MyFunc.Wait(2);
 
-        WebElement fullnameControl = driver.findElement(By.xpath("//div[@class='border col-md-12 col-sm-12']//p[@id='name']"));
-        Assert.assertTrue("Fullname testi başarısız", fullnameControl.getText().contains("Automation"));
+        WebElement fullNameControl = driver.findElement(By.xpath("//div[@class='border col-md-12 col-sm-12']//p[@id='name']"));
+        Assert.assertTrue("Fullname testi başarısız", fullNameControl.getText().contains("Automation"));
 
         WebElement emailControl = driver.findElement(By.xpath("//div[@class='border col-md-12 col-sm-12']//p[@id='email']"));
         Assert.assertTrue("email testi başarısız", emailControl.getText().contains("Testing"));
@@ -70,8 +70,8 @@ public class Odev2 extends BaseDriver {
         password.sendKeys(passwordStr);
         MyFunc.Wait(1);
 
-        WebElement singinClick=driver.findElement(By.xpath("//div[@class='buttons-w']/a"));
-        singinClick.click();
+        WebElement singInClick=driver.findElement(By.xpath("//div[@class='buttons-w']/a"));
+        singInClick.click();
         MyFunc.Wait(1);
 
         WebElement control=driver.findElement(By.xpath("(//div[@class='content-w']//h6)[1]"));
@@ -79,6 +79,7 @@ public class Odev2 extends BaseDriver {
 
         BekleKapat();
     }
+
     @Test
     public void Test3(){
          /*
@@ -87,13 +88,13 @@ public class Odev2 extends BaseDriver {
         3) Bu yazının göründüğünü doğrulayınız. -> (We've got 297 results for 'teddy bear')
         Not: Bu yazıdaki sayı değişiklik gösterebilir. Önemli olan cümle kalıbı.
        */
-        String searchComfirm="teddy bear";
+        String searchConfirm ="teddy bear";
 
         driver.get("https://www.snapdeal.com/");
         MyFunc.Wait(1);
 
         WebElement searchBox=driver.findElement(By.xpath("(//div[@class='topBar  top-bar-homepage  top-freeze-reference-point']//input)[1]"));
-        searchBox.sendKeys(searchComfirm);
+        searchBox.sendKeys(searchConfirm);
         MyFunc.Wait(1);
 
         WebElement searchBtn=driver.findElement(By.xpath("//span[@class='searchTextSpan']"));
@@ -105,6 +106,7 @@ public class Odev2 extends BaseDriver {
 
         BekleKapat();
     }
+
     @Test
     public void Test4(){
          /*
@@ -150,6 +152,7 @@ public class Odev2 extends BaseDriver {
 
         BekleKapat();
     }
+
     @Test
     public void Test5(){
           /*
@@ -175,6 +178,7 @@ public class Odev2 extends BaseDriver {
 
         BekleKapat();
     }
+
     @Test
     public void Test6(){
          /*
