@@ -25,14 +25,14 @@ public class Odev1 extends BaseDriver {
 
         String fullNameStr = "Automation";
         String emailStr = "Testing@gmail.com";
-        String currentAddresStr = "Testing Current Address";
+        String currentAddressStr = "Testing Current Address";
         String permanentAddressStr = "Testing permanent address";
 
         driver.get("http://demoqa.com/text-box");
         MyFunc.Wait(2);
 
-        WebElement fullname = driver.findElement(By.cssSelector("[placeholder='Full Name']"));
-        fullname.sendKeys(fullNameStr);
+        WebElement fullName = driver.findElement(By.cssSelector("[placeholder='Full Name']"));
+        fullName.sendKeys(fullNameStr);
         MyFunc.Wait(2);
 
         WebElement email = driver.findElement(By.cssSelector("[placeholder='name@example.com']"));
@@ -40,7 +40,7 @@ public class Odev1 extends BaseDriver {
         MyFunc.Wait(2);
 
         WebElement currentAddress = driver.findElement(By.cssSelector("[placeholder='Current Address']"));
-        currentAddress.sendKeys(currentAddresStr);
+        currentAddress.sendKeys(currentAddressStr);
         MyFunc.Wait(2);
 
         WebElement permanentAddress = driver.findElement(By.cssSelector("div[id='permanentAddress-wrapper'] textarea"));
@@ -51,8 +51,8 @@ public class Odev1 extends BaseDriver {
         submitBtn.click();
         MyFunc.Wait(2);
 
-        WebElement fullnameControl = driver.findElement(By.cssSelector("div[class='border col-md-12 col-sm-12']>:nth-child(1)"));
-        Assert.assertTrue("Fullname testi başarısız", fullnameControl.getText().contains("Automation"));
+        WebElement fullNameControl = driver.findElement(By.cssSelector("div[class='border col-md-12 col-sm-12']>:nth-child(1)"));
+        Assert.assertTrue("Fullname testi başarısız", fullNameControl.getText().contains("Automation"));
 
         WebElement emailControl = driver.findElement(By.cssSelector("div[class='border col-md-12 col-sm-12']>:nth-child(2)"));
         Assert.assertTrue("email testi başarısız", emailControl.getText().contains("Testing"));
