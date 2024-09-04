@@ -49,4 +49,31 @@ public class Odev4 extends BaseDriver {
 
         BekleKapat();
     }
+
+    @Test
+    public void Test5()
+    {
+        //Bu websitesine gidiniz. [https://testpages.herokuapp.com/styled/index.html]
+        //Fake Alerts' tıklayınız.
+        //Show Alert Box'a tıklayınız.
+        //Ok'a tıklayınız.
+        //Alert kapanmalıdır.
+
+        driver.get("https://testpages.herokuapp.com/styled/index.html");
+        MyFunc.Wait(2);
+
+        WebElement fakeAlertts=driver.findElement(By.cssSelector("a[id='fakealerttest']"));
+        fakeAlertts.click();
+        MyFunc.Wait(2);
+
+        WebElement showAlertts=driver.findElement(By.cssSelector("div[class='centered'] [id='fakealert']"));
+        showAlertts.click();
+        MyFunc.Wait(2);
+
+        WebElement okButton=driver.findElement(By.cssSelector("div[class='dialog-actions'] [id='dialog-ok']"));
+        okButton.click();
+        MyFunc.Wait(2);
+
+        BekleKapat();
+    }
 }
