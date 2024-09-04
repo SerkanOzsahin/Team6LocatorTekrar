@@ -33,8 +33,14 @@ public class Merve4 extends BaseDriver {
         MyFunc.Wait(2);
 
         WebElement result=driver.findElement(By.cssSelector("div[class='centered'] span"));
-        Assert.assertTrue("Result is not true",result.getText().contains("16"));
+        result.getText();
         MyFunc.Wait(2);
+
+        int Number1=Integer.parseInt(no1);
+        int Number2=Integer.parseInt(no2);
+        int Result=Number1+Number2;
+        String multiple=String.valueOf(Result);
+        Assert.assertTrue("Result is not true",result.getText().equals(multiple));
         BekleKapat();
 
     }
