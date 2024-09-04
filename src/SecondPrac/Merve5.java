@@ -28,5 +28,6 @@ public class Merve5 extends BaseDriver {
         clickOk.click();
         BekleKapat();
 
+
     }
 }
