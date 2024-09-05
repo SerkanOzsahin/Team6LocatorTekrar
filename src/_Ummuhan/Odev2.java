@@ -120,8 +120,12 @@ public class Odev2 extends BaseDriver {
         calculateButton.click();
         MyFunc.Wait(2);
 
+        int firstNo=Integer.parseInt(inputFirst);
+        int secondNo=Integer.parseInt(inputSecond);
+        String plus=String.valueOf(firstNo+secondNo);
+
         WebElement answer = driver.findElement(By.xpath("//div[@class='centered']//div//p"));
-        Assert.assertTrue("Doğru sonuç ekrana gelmedi", answer.getText().contains((String.valueOf(Integer.parseInt(inputFirst) + Integer.parseInt(inputSecond)))));
+        Assert.assertTrue("Doğru sonuç ekrana gelmedi", answer.getText().contains(plus));
         System.out.println(answer.getText());
         MyFunc.Wait(2);
 
