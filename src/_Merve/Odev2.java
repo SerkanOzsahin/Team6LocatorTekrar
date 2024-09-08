@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class Odev2 extends BaseDriver {
 
@@ -166,5 +167,47 @@ public class Odev2 extends BaseDriver {
         WebElement okClick = driver.findElement(By.xpath("//div[@class='dialog-actions' ]/button"));
         okClick.click();
         BekleKapat();
+    }
+    @Test
+    public void DiffirentFormFromTest4(){
+
+        driver.get("https://testpages.herokuapp.com/styled/index.html");
+        MyFunc.Wait(2);
+
+        WebElement clickCalculate=driver.findElement(By.xpath("//div[@class='titledesc' ]//a[@href='calculator' ]"));
+        clickCalculate.click();
+        MyFunc.Wait(2);
+
+        String no1="5";
+        WebElement number1=driver.findElement(By.xpath("//div[@class='form-label' ]/input[@type='text' ][1]"));
+        number1.sendKeys(no1);
+        MyFunc.Wait(2);
+
+        WebElement select=driver.findElement(By.xpath("//div[@class='form-label' ]/select"));
+        Select selectMenu=new Select(select);
+        selectMenu.selectByIndex(1);
+        MyFunc.Wait(2);
+
+        String no2="7";
+        WebElement number2=driver.findElement(By.xpath("//div[@class='form-label' ]/input[2]"));
+        number2.sendKeys(no2);
+        MyFunc.Wait(2);
+
+        WebElement clickButton=driver.findElement(By.cssSelector("div>:nth-child(1) input[class='styled-click-button' ]"));
+        clickButton.click();
+        MyFunc.Wait(2);
+
+        WebElement text=driver.findElement(By.xpath("//p[text()='Answer : ']/span"));
+        System.out.println("Text :" +text.getText());
+
+        int sayi1=Integer.parseInt(no1);
+        int sayi2=Integer.parseInt(no2);
+        int carpim=sayi1*sayi2;
+
+        String carpim2=String.valueOf(carpim);
+        Assert.assertTrue("Sonuç doğru değil!",text.getText().contains(carpim2));
+        BekleKapat();
+
+
     }
 }
