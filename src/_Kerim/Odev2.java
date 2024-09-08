@@ -1,4 +1,4 @@
-package SecondPrac;
+package _Kerim;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class Task2 extends BaseDriver {
+public class Odev2 extends BaseDriver {
     //) Bu siteye gidin. -> https://demo.applitools.com/
     //
     //2) Username kısmına "ttechno@gmail.com" girin.
