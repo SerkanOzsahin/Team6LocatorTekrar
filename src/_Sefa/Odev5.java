@@ -81,23 +81,6 @@ public class Odev5 extends BaseDriver {
     @Test
     public void Test2() {
         //Senaryo
-        //1- google.com ile sayfayı açınız.
-        //2- Daha sonra Yeni bir TAB (ctrl+T) açınız.
-        //3- Bu açılan yeni sayfada facebook.com u açınız.
-        //4- Bu sayfanın açıldığını URL sinden kontrol ediniz.
-        //5- Daha sonra facebook.com sayfasını kapatınız.
-
-        driver.get("https://www.google.com/");
-        wait.until(ExpectedConditions.urlToBe("https://www.google.com/"));
-
-        WebElement search=driver.findElement(By.name("q"));
-
-        BekleKapat();
-    }
-
-    @Test
-    public void Test3() {
-        //Senaryo
         //1) https://demoqa.com/browser-windows adresine gidin
         //2) Alerts’e tiklayin
         //3) On button click, alert will appear after 5 seconds karsisindaki click me butonuna basin
@@ -125,7 +108,7 @@ public class Odev5 extends BaseDriver {
     }
 
     @Test
-    public void Test4() {
+    public void Test3() {
         //Senaryo
         //1) https://demoqa.com/dynamic-properties adresine gidin
         //2) “Will enable 5 seconds” butonunun enable olmasini bekleyin
@@ -141,7 +124,7 @@ public class Odev5 extends BaseDriver {
     }
 
     @Test
-    public void Test5() {
+    public void Test4() {
         //Senaryo
         //https://demoqa.com/dynamic-properties adresine gidin
         //1) “Visible After 5 seconds” butonunun gorunur olmasini bekleyin
@@ -157,7 +140,7 @@ public class Odev5 extends BaseDriver {
     }
 
     @Test
-    public void Test6() {
+    public void Test5() {
         //Senaryo
         //https://the-internet.herokuapp.com/add_remove_elements/ adresine gidin
         //1) “Add Element” butona basin
